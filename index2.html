@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var password;
+        admin = prompt('vvedite login "Admin"');
+        if(admin === null) {
+            alert('Logout');
+        } else {
+            if(admin == 'Admin') {
+                password = prompt('Enter Password "BlackLord"');
+                if(password === null) {
+                    alert('Logout');
+                } else {
+                    if(password == 'BlackLord') {
+                        alert('Welcome');
+                    } else {
+                        alert('Do not know you');
+                    }
+                }
+            } else {
+                alert('I do not know you');
+            }
+        }
+
+</script>
+</body>
+</html>
