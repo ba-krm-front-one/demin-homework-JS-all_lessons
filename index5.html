@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function() {
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var min = prompt('Enter min');
+            min = Number(min);
+        var max = prompt('Enter max');
+            max = Number(max);
+        var arr = [
+            getRandomInt(min, max),
+            getRandomInt(min, max),
+            getRandomInt(min, max),
+            getRandomInt(min, max),
+        ];
+
+        let first = map(square, arr);
+        console.log('Entered array '+arr);
+        console.log('New array '+first);
+
+        function map(callBack, theArray) {
+            let newArray = [];
+            theArray.forEach(element => {
+                let processedElement = callBack(element);
+            newArray.push(processedElement)
+        });
+            return newArray;
+        }
+        function square(x) {
+            return x * x;
+        } // возведение в квадрат
+
+    })();
+</script>
+</body>
+</html>
