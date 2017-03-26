@@ -14,12 +14,18 @@
             min = Number(min);
         var max = prompt('Enter max');
             max = Number(max);
-        var arr = [
+        var arrLength = prompt('Enter kolichestvo elementov');
+            arrLength = Number(arrLength);
+        var arr = [];
+        for (i = 0;i < arrLength;i++) {
+            arr[i] = getRandomInt(min, max);
+        }
+        /*var arr = [
             getRandomInt(min, max),
             getRandomInt(min, max),
             getRandomInt(min, max),
             getRandomInt(min, max),
-        ];
+        ];*/
 
         let first = map(square, arr);
         console.log('Entered array '+arr);
